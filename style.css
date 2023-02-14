@@ -11,7 +11,7 @@ html {
 }
 
 body {
-    background-color: #525050;
+    background: black;
     /* box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
     /* box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px; */
     color: #fff;
@@ -31,6 +31,59 @@ body {
     font-family: sans-serif;
 
 
+}
+/* ********************-=-==-=-=-=-=-=-=-=resume css==-=-=-=-=-==****************** */
+#resume-button-2,#resume-link-1{
+    display: block;
+    height: 50px;
+    width: 250px;
+    background: #ff004f;
+    text-align: center;
+    padding: 5px 10px;
+     /* position: absolute; 
+     margin: auto;  */
+    margin-top: 5px;
+    text-decoration: none;
+    list-style: none;
+    left: 0;
+    right: 0;
+    border-radius: 15px;
+    color: #fff;
+}
+
+#resume-link-1{
+    font-size: 25px;
+}
+
+
+/* ---------------------------project github link and deployed link------------ */
+.project-github-link,.project-deployed-link{
+    color: green;
+    font-size: 20px;
+   
+}
+.project-github-link:hover,.project-deployed-link:hover{
+background: linear-gradient(orange,crimson,black);
+}
+#contact-phone ,#contact-email{
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 15px;
+    padding: 5px 10px;
+
+}
+ /********************************************************* techstack name**************************************************** */
+ .skills-card-name{
+    margin: 10px;
+    text-align: center;
+    font-size: 25px;
+    background-color: #0a0a0a00;
+    padding: 10px 5px;
+    border-radius: 20px;
+    
+}
+.skills-card-name:hover{
+    background: linear-gradient(rgb(215, 14, 84),rgb(255, 0, 212),rgb(128, 0, 128));
 }
 
 .navbar .max-width {
@@ -75,15 +128,24 @@ body {
 .container {
     padding: 10px 5%;
     /* box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px; */
-    box-shadow: rgba(193, 210, 226, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    /* box-shadow: rgba(193, 210, 226, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset; */
 }
 
 nav {
     display: flex;
-
+    /* position: fixed; */
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    
+    width: 100%;
+
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #080808;
 }
 
 .logo {
@@ -363,7 +425,13 @@ nav ul li a:hover::after {
 
 .btn.btn2 {
     display: inline-block;
-    background: #ff004f;
+    background: #f0145a;
+    border-radius: 20px;
+    border: none;
+    font-size: xx-large;
+}
+.btn.btn2:hover{
+    background: rgb(12, 172, 12);
 }
 
 .contact-right form {
@@ -387,7 +455,8 @@ form textarea {
 form .btn2 {
     padding: 14px 60px;
     font-size: 18px;
-    margin-top: 20px;
+    margin-top: 20px ;
+    /* margin-left: 15px; */
     cursor: pointer;
 
 
