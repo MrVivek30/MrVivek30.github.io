@@ -486,7 +486,7 @@
 
     .hero-grid {
       display: grid;
-      grid-template-columns: 1.18fr 0.92fr;
+      grid-template-columns: 1.15fr 0.95fr;
       align-items: center;
       gap: clamp(28px, 5vw, 64px);
     }
@@ -606,75 +606,64 @@
       margin-left: 6px;
     }
 
-    /* Hero Right Architecture Graphic Card */
+    /* Hero Right Profile Photo Card */
     .hero-media-col {
       position: relative;
+      display: flex;
+      justify-content: center;
     }
 
-    .hero-code-card {
+    .hero-photo-wrap {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+    }
+
+    .hero-photo-card {
+      position: relative;
+      border-radius: 28px;
       border: 1px solid var(--border-strong);
       background: var(--bg-2);
-      border-radius: var(--radius);
-      padding: 24px;
-      box-shadow: var(--shadow);
-      position: relative;
+      padding: 12px;
+      box-shadow: 0 25px 65px -15px rgba(0, 0, 0, 0.7);
       overflow: hidden;
-      font-family: var(--font-mono);
-      font-size: 13px;
+      transition: transform 0.4s var(--ease), border-color 0.3s;
     }
 
-    .hero-code-card::before {
+    .hero-photo-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent);
+    }
+
+    .hero-photo-card::before {
       content: "";
-      background: radial-gradient(circle at 80% 20%, var(--glow-1), transparent 60%);
       position: absolute;
       inset: 0;
+      background: radial-gradient(circle at 50% 15%, var(--glow-1), transparent 70%);
       pointer-events: none;
-      opacity: 0.7;
+      opacity: 0.85;
     }
 
-    .code-card-header {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding-bottom: 16px;
-      margin-bottom: 16px;
-      border-bottom: 1px solid var(--border);
+    .hero-photo-img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 4.9;
+      object-fit: cover;
+      object-position: center 15%;
+      border-radius: 20px;
+      display: block;
+      filter: contrast(1.02) saturate(1.04);
     }
-
-    .code-dot {
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-    }
-
-    .code-dot.red { background: #ef4444; }
-    .code-dot.yellow { background: #f59e0b; }
-    .code-dot.green { background: #10b981; }
-
-    .code-card-title {
-      color: var(--text-3);
-      font-size: 12px;
-      margin-left: auto;
-    }
-
-    .code-line {
-      line-height: 1.7;
-      color: var(--text-2);
-    }
-
-    .code-line b { color: var(--accent); font-weight: 500; }
-    .code-line span.k { color: #f472b6; }
-    .code-line span.s { color: #34d399; }
-    .code-line span.c { color: var(--text-3); font-style: italic; }
 
     .hero-floating-badge {
       position: absolute;
-      z-index: 2;
+      z-index: 10;
       font-family: var(--font-mono);
       font-size: 12px;
       background: var(--nav-bg);
       border: 1px solid var(--border-strong);
-      backdrop-filter: blur(12px);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       padding: 8px 14px;
       border-radius: 999px;
       color: var(--text);
@@ -686,13 +675,13 @@
     }
 
     .badge-pos-1 {
-      top: -12px;
-      right: 18px;
+      top: -10px;
+      right: -10px;
     }
 
     .badge-pos-2 {
-      bottom: -14px;
-      left: 18px;
+      bottom: 20px;
+      left: -12px;
       animation-delay: -3s;
     }
 
@@ -743,7 +732,8 @@
 
     @media (max-width: 960px) {
       .hero-grid { grid-template-columns: 1fr; }
-      .hero-media-col { margin-top: 20px; }
+      .hero-media-col { margin-top: 24px; }
+      .hero-photo-wrap { max-width: 320px; }
       .hero-meta { grid-template-columns: repeat(2, 1fr); }
     }
 
@@ -822,7 +812,7 @@
 
     .b-story p {
       color: var(--text-2);
-      font-size: 16px;
+      font-size: 15.5px;
       line-height: 1.65;
     }
 
@@ -895,15 +885,17 @@
 
     .b-edu .school {
       font-family: var(--font-display);
-      font-size: 21px;
+      font-size: 18px;
       font-weight: 700;
-      margin-top: 24px;
+      margin-top: 22px;
+      line-height: 1.3;
     }
 
     .b-edu .sub {
       color: var(--text-2);
-      margin-top: 4px;
-      font-size: 14.5px;
+      margin-top: 6px;
+      font-size: 13.5px;
+      line-height: 1.5;
     }
 
     .b-edu .badge {
@@ -927,7 +919,7 @@
 
     .b-clock .time {
       font-family: var(--font-mono);
-      font-size: 38px;
+      font-size: 36px;
       font-weight: 600;
       letter-spacing: -0.03em;
       color: var(--accent);
@@ -936,7 +928,7 @@
 
     .b-clock .place {
       color: var(--text-2);
-      font-size: 13.5px;
+      font-size: 13px;
       display: flex;
       align-items: center;
       gap: 6px;
@@ -954,7 +946,7 @@
       background: var(--surface);
       border-radius: 12px;
       padding: 10px 14px;
-      font-size: 14px;
+      font-size: 13.5px;
       font-weight: 500;
       display: flex;
       align-items: center;
@@ -1259,6 +1251,7 @@
       color: var(--text-2);
       margin-bottom: 14px;
       font-size: 15px;
+      line-height: 1.6;
     }
 
     .job-card ul {
@@ -1591,7 +1584,7 @@
           </div>
 
           <p class="hero-tagline reveal is-visible">
-            I architect and scale mission-critical backend systems — from choreography-based distributed microservices and real-time Kafka pipelines to large-scale data sync engines handling millions of records.
+            I engineer high-throughput backend services and data synchronization pipelines at InsightGeeks Solutions — building scalable microservices, dynamic task-rule assignment engines, and real-time event-driven systems.
           </p>
 
           <div class="hero-actions reveal is-visible">
@@ -1604,7 +1597,7 @@
               <a class="btn btn-icon" href="https://github.com/MrVivek30" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                 <i class="fa-brands fa-github"></i>
               </a>
-              <a class="btn btn-icon" href="https://linkedin.com/in/vivek-chaudhary" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <a class="btn btn-icon" href="https://www.linkedin.com/in/vivek-chowdhary-725087203/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <i class="fa-brands fa-linkedin-in"></i>
               </a>
               <a class="btn btn-icon" href="mailto:vivekchaudhary538@gmail.com" aria-label="Email">
@@ -1617,31 +1610,20 @@
           </div>
         </div>
 
-        <!-- Hero Architecture Graphic Card -->
+        <!-- Hero Profile Photo Showcase -->
         <div class="hero-media-col reveal is-visible">
-          <div class="hero-floating-badge badge-pos-1">
-            <i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> 97% Sync Speedup (2h → 2.8m)
-          </div>
-          
-          <div class="hero-code-card">
-            <div class="code-card-header">
-              <span class="code-dot red"></span>
-              <span class="code-dot yellow"></span>
-              <span class="code-dot green"></span>
-              <span class="code-card-title">OrderSagaOrchestrator.java</span>
+          <div class="hero-photo-wrap">
+            <div class="hero-floating-badge badge-pos-1">
+              <i class="fa-solid fa-bolt" style="color: #f59e0b;"></i> 97% Sync Speedup (2h → 2.8m)
             </div>
-            <div class="code-line"><span class="k">@KafkaListener</span>(topics = <span class="s">"payment-failed-topic"</span>)</div>
-            <div class="code-line"><span class="k">public void</span> <span class="k">handlePaymentFailure</span>(PaymentFailedEvent ev) {</div>
-            <div class="code-line">&nbsp;&nbsp;<span class="c">// Trigger distributed compensation</span></div>
-            <div class="code-line">&nbsp;&nbsp;ReleaseStockEvent comp = <span class="k">new</span> ReleaseStockEvent(ev.orderId());</div>
-            <div class="code-line">&nbsp;&nbsp;kafkaTemplate.send(<span class="s">"release-stock-topic"</span>, comp);</div>
-            <div class="code-line">&nbsp;&nbsp;redisCache.evictLock(ev.orderId());</div>
-            <div class="code-line">&nbsp;&nbsp;log.info(<span class="s">"Stock released &amp; transaction compensated."</span>);</div>
-            <div class="code-line">}</div>
-          </div>
 
-          <div class="hero-floating-badge badge-pos-2">
-            <i class="fa-solid fa-server" style="color: var(--accent);"></i> Choreography Saga · Kafka &amp; Redis
+            <div class="hero-photo-card">
+              <img src="./assets/vivek-chowdhary.jpg" alt="Vivek Chowdhary — SDE-II &amp; Java Backend Developer" class="hero-photo-img" />
+            </div>
+
+            <div class="hero-floating-badge badge-pos-2">
+              <i class="fa-solid fa-server" style="color: var(--accent);"></i> SDE-II @ InsightGeeks Solutions
+            </div>
           </div>
         </div>
       </div>
@@ -1723,19 +1705,16 @@
         <article class="card b-story reveal">
           <div class="label">
             <i class="fa-solid fa-network-wired" style="color: var(--accent);"></i>
-            Distributed Systems × FinTech Scale × High-Throughput Sync
+            Enterprise Backend × Field Operations × High-Throughput Sync
           </div>
           <p>
-            I am an <b>SDE-II / Java Backend Developer</b> at <b>InsightGeeks Solutions</b> with 3+ years of experience architecting distributed architectures, real-time Kafka event streams, and enterprise data synchronization engines.
+            I am an <b>SDE-II / Java Backend Developer</b> at <b>InsightGeeks Solutions</b> with 3+ years of experience engineering high-throughput backend services, distributed event streams, and mission-critical enterprise systems.
           </p>
           <p>
-            Two primary engineering achievements highlight my work:
+            At InsightGeeks, my core work centers on the <b>TrackoField Enterprise platform</b> — a scalable field workforce management system enabling managers to manage field employees, assign tasks dynamically according to predefined team rules and requirements, and track real-time agent activities, progress, and SLAs.
           </p>
           <p>
-            1. <b>The Midland DB Sync Engine:</b> Optimized a massive enterprise data pipeline between MS SQL Server and MongoDB, slashing sync runtime by <b>97% from 2+ hours to 2.8 minutes</b> for 242,000+ records via streaming JDBC (<code>fetchSize=1000</code>), <code>bulkOps(UNORDERED)</code>, compound indexing (<code>{ cmpId: 1, mbrCde: 1 }</code>), and a rolling 24-hour lookback window eliminating edge-case data loss.
-          </p>
-          <p>
-            2. <b>Distributed Choreography Saga Microservices:</b> Built a production-grade multi-service ecosystem (Order, Inventory, Payment) with Kafka-driven eventual consistency, automatic compensation rollbacks (<code>ReleaseStockEvent</code>), Redis distributed locking, and OpenZipkin observability.
+            Recently, I architected the <b>Midland DB Syncing Integration</b>: an end-to-end data pipeline between an enterprise client's (Midland Microfin) MS SQL Server and TrackoField's MongoDB, slashing sync runtime by <b>97% from 2+ hours down to 2.8 minutes</b> for 242,000+ records via streaming JDBC (<code>fetchSize=1000</code>), <code>bulkOps(UNORDERED)</code>, compound indexing (<code>{ cmpId: 1, mbrCde: 1 }</code>), and a rolling 24-hour lookback window eliminating edge-case data omissions.
           </p>
         </article>
 
@@ -1754,7 +1733,7 @@
               <span>Jan 2023 — Jun 2023</span>
             </div>
             <div>
-              <b>B.Tech in ECE — MVIT</b>
+              <b>AKTU, Lucknow — B.Tech ECE</b>
               <span>2018 — 2022</span>
             </div>
           </div>
@@ -1764,8 +1743,8 @@
         <article class="card b-edu reveal">
           <span class="badge">B.Tech Graduate</span>
           <i class="fa-solid fa-graduation-cap" style="font-size: 32px; color: var(--accent);"></i>
-          <div class="school">MVIT &amp; Masai School</div>
-          <div class="sub">ECE &amp; Intensive Software Engineering</div>
+          <div class="school">Dr. A. P. J. Abdul Kalam Technical University, Lucknow</div>
+          <div class="sub">B.Tech in Electronics &amp; Communication Engg. (2018 — 2022) · CGPA: 7.97</div>
         </article>
 
         <!-- Local Time Card -->
@@ -1788,7 +1767,7 @@
           <a href="https://github.com/MrVivek30" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-github"></i> GitHub <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
-          <a href="https://linkedin.com/in/vivek-chaudhary" target="_blank" rel="noopener noreferrer">
+          <a href="https://www.linkedin.com/in/vivek-chowdhary-725087203/" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-linkedin-in"></i> LinkedIn <i class="fa-solid fa-arrow-up-right-from-square"></i>
           </a>
           <a href="mailto:vivekchaudhary538@gmail.com">
@@ -1806,7 +1785,7 @@
       <div class="section-head reveal">
         <span class="eyebrow">Selected Work</span>
         <h2>Enterprise architectures &amp; production systems.</h2>
-        <p>Real-world high-throughput distributed systems, performance-tuned database engines, and autonomous tools.</p>
+        <p>Real-world high-throughput distributed systems, performance-tuned database engines, and core application architectures.</p>
       </div>
 
       <div class="projects-featured">
@@ -1906,35 +1885,48 @@
           </div>
         </article>
 
-        <!-- Project 03: Autonomous Job Bot -->
+        <!-- Project 03: TrackoField Dynamic Task Allocation & Workflow Engine -->
         <article class="card project featured reveal" style="--art: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #312e81 100%)">
           <div class="project-art">
             <span class="art-index">03</span>
-            <i class="fa-solid fa-robot art-icon"></i>
+            <i class="fa-solid fa-list-check art-icon"></i>
           </div>
           <div class="project-body">
-            <span class="project-tag">Stealth Automation · Playwright · Node.js 24</span>
-            <h3>Autonomous ATS Job Application Engine</h3>
+            <span class="project-tag">Enterprise Core Application · Rule-Based Architecture</span>
+            <h3>TrackoField — Rule-Based Task Allocation &amp; Workflow Engine</h3>
             <p>
-              Engineered a zero-ban automated application engine directly targeting corporate ATS portals (Greenhouse, Lever) across India, bypassing public scraper blocks on LinkedIn/Naukri.
+              Engineered the core backend orchestration engine powering TrackoField: enabling managers to oversee hundreds of field employees, dynamically allocate tasks based on team-specific rules, and monitor real-time activity and milestone progression.
             </p>
             <ul>
-              <li><b>Zero Account Ban Risk:</b> Connects directly to employer career boards without automated web scraping of personal accounts.</li>
-              <li><b>Stealth Playwright Runner:</b> Handles dynamic multi-step question prompts, file uploads, and payload sanitization with human-like delays.</li>
-              <li><b>CLI Orchestration:</b> Multi-city scanning (Bengaluru, Hyderabad, Pune, Noida, Gurgaon) with dry-run verification mode.</li>
+              <li><b>Dynamic Rule-Based Assignment Engine:</b> Implemented flexible rule evaluation allowing managers to auto-allocate tasks according to team-specific criteria, geographic zones, agent skill levels, and workload balancing.</li>
+              <li><b>Real-Time Activity &amp; Status Tracking:</b> Engineered high-throughput REST APIs and telemetry endpoints capturing employee attendance, live check-ins, and task milestone transitions (Assigned → In Progress → Completed).</li>
+              <li><b>Multi-Tenant Hierarchy &amp; Role-Based Security:</b> Structured multi-tenant organizational layers (Organizations, Teams, Managers, Field Employees) with granular permission isolation.</li>
+              <li><b>SLA Deadlines &amp; Automated Escalations:</b> Integrated scheduled jobs monitoring delayed tasks, auto-reallocating overdue orders, and firing push notifications to supervisory managers.</li>
             </ul>
 
+            <button type="button" class="project-toggle" onclick="toggleDetails(this)">
+              <span>Engine Details</span> <i class="fa-solid fa-chevron-down"></i>
+            </button>
+
+            <div class="project-details">
+              <p style="font-size: 13.5px; color: var(--text-2); margin-top: 8px;">
+                <b>High-Concurrency Architecture:</b> Backed by Redis distributed caching for rapid employee status lookups and MongoDB sharded collections for millions of daily tracking pings.
+              </p>
+            </div>
+
             <div class="project-stack">
-              <span class="chip">Node.js 24</span>
-              <span class="chip">Playwright</span>
-              <span class="chip">Stealth Plugin</span>
-              <span class="chip">Greenhouse ATS</span>
-              <span class="chip">Lever ATS</span>
+              <span class="chip">Java 11</span>
+              <span class="chip">Spring Boot</span>
+              <span class="chip">Spring Data MongoDB</span>
+              <span class="chip">Redis</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">Schedulers</span>
+              <span class="chip">Multi-Tenancy</span>
             </div>
 
             <div class="project-links">
-              <a class="btn" href="https://github.com/MrVivek30" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i> View Profile
+              <a class="btn" href="#experience">
+                <i class="fa-solid fa-briefcase"></i> View Career Experience
               </a>
             </div>
           </div>
@@ -1958,17 +1950,20 @@
           <article class="card job-card">
             <div class="job-top">
               <h3>SDE II – Java Backend Developer</h3>
-              <span class="company">@ InsightGeeks Solutions Pvt. Ltd.</span>
+              <span class="company">@ InsightGeeks Solutions Pvt. Ltd. (TrackoField)</span>
               <span class="period">Aug 2023 — Present · Noida, India</span>
             </div>
             <p class="job-summary">
-              Core backend engineering leadership for high-volume enterprise data pipelines, cron schedulers, and microservice APIs.
+              Core backend engineering leadership for <strong>TrackoField</strong> — an enterprise field workforce management platform enabling managers to manage field employees, assign tasks dynamically using predefined rules and requirements configured for respective teams, and track on-ground activities and progress in real time.
             </p>
             <ul>
-              <li>Architected and optimized the Midland DB sync engine, achieving a <b>97% runtime reduction (2+ hours down to 2.8 minutes)</b> for 242K+ records using JDBC streaming and MongoDB bulk operations.</li>
-              <li>Designed compound indexes across high-traffic MongoDB collections, preventing full table scans and dropping query execution latency to single-digit milliseconds.</li>
-              <li>Engineered rolling 24-hour lookback schedulers eliminating late-night edge-case data omissions.</li>
-              <li>Built and maintained REST APIs and scheduled jobs supporting multi-tenant field workforce management.</li>
+              <li><b>Rule-Based Task Assignment Engine:</b> Architected and maintained the core backend service allowing team managers to define custom task rules, automated routing, and dynamic task distribution across field personnel based on location, availability, and skills.</li>
+              <li><b>Real-Time Activity Tracking:</b> Built resilient REST APIs and tracking endpoints processing live employee check-ins, task completion verifications, and progress state transitions with sub-second response times.</li>
+              <li><b>Flagship Midland DB Sync Optimization:</b> Spearheaded the data integration between MS SQL Server and MongoDB (Midland Microfin), slashing sync execution by <b>97% from 2+ hours down to 2.8 minutes</b> for 242,000+ members.</li>
+              <li><b>Streaming JDBC &amp; Bulk Operations:</b> Prevented JVM heap Out-Of-Memory (OOM) failures by streaming SQL cursors (<code>fetchSize=1000</code>) directly into batch collection writes (<code>mongoTemplate.bulkOps(UNORDERED)</code>).</li>
+              <li><b>Compound Index Tuning:</b> Eliminated collection-wide table scans (<code>COLLSCAN</code>) across multi-million document collections using compound indexes (<code>{ cmpId: 1, mbrCde: 1 }</code> and <code>{ cmpId: 1, asgTo: 1 }</code>).</li>
+              <li><b>Eliminated 1h 16m Edge-Case Omission:</b> Engineered a rolling 24-hour lookback window, ensuring late-night customer accounts and tasks created between 10:44 PM and midnight are never lost between daily scheduler executions.</li>
+              <li><b>Multi-Tenant Hierarchy:</b> Designed scalable data models supporting multi-tenant organizational structures (Managers, Team Leads, Field Agents) with strict data isolation and SLA alert monitors.</li>
             </ul>
             <div class="job-stack">
               <span class="chip">Java 11</span>
@@ -1976,8 +1971,10 @@
               <span class="chip">MongoDB</span>
               <span class="chip">MS SQL Server</span>
               <span class="chip">JDBC Streaming</span>
-              <span class="chip">REST APIs</span>
+              <span class="chip">Bulk Operations</span>
               <span class="chip">Redis</span>
+              <span class="chip">REST APIs</span>
+              <span class="chip">Multi-Tenancy</span>
             </div>
           </article>
         </div>
@@ -2015,16 +2012,17 @@
           <article class="card job-card">
             <div class="job-top">
               <h3>B.Tech in Electronics &amp; Communication</h3>
-              <span class="company">@ Madhu Vachaspati Inst. of Engg. &amp; Tech.</span>
-              <span class="period">2018 — 2022 · Kaushambi, India</span>
+              <span class="company">@ Dr. A. P. J. Abdul Kalam Technical University, Lucknow (AKTU)</span>
+              <span class="period">2018 — 2022 · Lucknow, India</span>
             </div>
             <p class="job-summary">
-              Graduated with CGPA 7.97. Solid grounding in computing principles, digital logic, and communication systems.
+              Graduated with CGPA 7.97. Solid grounding in computing principles, digital logic, microprocessors, and communication networks.
             </p>
             <div class="job-stack">
               <span class="chip">Digital Systems</span>
               <span class="chip">Computer Networks</span>
               <span class="chip">Microprocessors</span>
+              <span class="chip">Signals &amp; Systems</span>
             </div>
           </article>
         </div>
@@ -2139,7 +2137,7 @@
             <i class="fa-solid fa-paper-plane"></i> Send Direct Email
           </a>
 
-          <a class="btn" href="https://linkedin.com/in/vivek-chaudhary" target="_blank" rel="noopener noreferrer">
+          <a class="btn" href="https://www.linkedin.com/in/vivek-chowdhary-725087203/" target="_blank" rel="noopener noreferrer">
             <i class="fa-brands fa-linkedin-in"></i> Connect on LinkedIn
           </a>
 
@@ -2165,7 +2163,7 @@
         <a href="https://github.com/MrVivek30" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-github"></i> GitHub
         </a>
-        <a href="https://linkedin.com/in/vivek-chaudhary" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/vivek-chowdhary-725087203/" target="_blank" rel="noopener noreferrer">
           <i class="fa-brands fa-linkedin-in"></i> LinkedIn
         </a>
         <a href="./Resume/Vivek-Chowdhary-Resume.pdf" target="_blank" download>
