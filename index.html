@@ -2512,7 +2512,7 @@
           </div>
         </article>
 
-        <!-- Project 03: TrackoField Dynamic Task Allocation & Workflow Engine -->
+        <!-- Project 03: TrackoField Enterprise Field Force Management System -->
         <article class="card project featured reveal" data-category="enterprise" style="--art: linear-gradient(135deg, #7c3aed 0%, #a855f7 50%, #312e81 100%)">
           <div class="project-art">
             <span class="art-index">03</span>
@@ -2520,10 +2520,10 @@
             <i class="fa-solid fa-list-check art-icon"></i>
           </div>
           <div class="project-body">
-            <span class="project-tag">Enterprise Core Application · Rule-Based Architecture</span>
-            <h3>TrackoField — Rule-Based Task Allocation &amp; Workflow Engine</h3>
+            <span class="project-tag">Enterprise Field Force Management · Task &amp; Workflow Management</span>
+            <h3>TrackoField — Field Force Management System</h3>
             <p>
-              Engineered the core backend orchestration engine powering TrackoField: enabling managers to oversee hundreds of field employees, dynamically allocate tasks based on team-specific rules, and monitor real-time activity and milestone progression.
+              Worked on the core backend modules of TrackoField, an enterprise Field Force Management System used to manage field employees, assign tasks, track activities, and manage day-to-day field operations.
             </p>
 
             <!-- Visual Architecture Diagram -->
@@ -2532,75 +2532,82 @@
                 <span class="arch-dot red"></span>
                 <span class="arch-dot yellow"></span>
                 <span class="arch-dot green"></span>
-                <span class="arch-title">TASK WORKFLOW ENGINE // MULTI-TENANT ORCHESTRATION</span>
-                <span class="arch-badge">⚡ DYNAMIC RULES</span>
+                <span class="arch-title">TASK MANAGEMENT // WORKFLOW &amp; FIELD ACTIVITY</span>
+                <span class="arch-badge">⚡ CORE BACKEND</span>
               </div>
               <div class="arch-flow">
                 <div class="arch-node">
-                  <div class="arch-node-icon"><i class="fa-solid fa-users-gear"></i></div>
-                  <div class="arch-node-title">Manager Portal</div>
-                  <div class="arch-node-sub">Rule Config</div>
+                  <div class="arch-node-icon"><i class="fa-solid fa-user-tie"></i></div>
+                  <div class="arch-node-title">Manager</div>
+                  <div class="arch-node-sub">Task Assignment<br>Team Rules</div>
                 </div>
                 <div class="arch-arrow">
                   <span class="arch-arrow-line"></span>
-                  <span class="arch-arrow-label">Rule Matrix</span>
+                  <span class="arch-arrow-label">Rule Dispatch</span>
                 </div>
                 <div class="arch-node highlight">
-                  <div class="arch-node-icon"><i class="fa-solid fa-brain"></i></div>
-                  <div class="arch-node-title">Allocation Core</div>
-                  <div class="arch-node-sub">Skill/Zone/Load</div>
+                  <div class="arch-node-icon"><i class="fa-solid fa-server"></i></div>
+                  <div class="arch-node-title">Backend Services</div>
+                  <div class="arch-node-sub">Task · Attendance · Leave<br>Expense · Reporting</div>
                 </div>
                 <div class="arch-arrow">
                   <span class="arch-arrow-line"></span>
-                  <span class="arch-arrow-label">Push Dispatch</span>
+                  <span class="arch-arrow-label">Activity Sync</span>
                 </div>
                 <div class="arch-node">
-                  <div class="arch-node-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-                  <div class="arch-node-title">Field Agent App</div>
-                  <div class="arch-node-sub">Milestones &amp; SLAs</div>
+                  <div class="arch-node-icon"><i class="fa-solid fa-person-walking-dashed-line-arrow-right"></i></div>
+                  <div class="arch-node-title">Field Employee</div>
+                  <div class="arch-node-sub">Assigned Tasks<br>Activity Tracking · Completion</div>
                 </div>
               </div>
               <div class="arch-benchmarks">
                 <div class="arch-metric">
-                  <span class="metric-val">&lt; 2ms</span>
-                  <span class="metric-lbl">Redis Cache Status</span>
+                  <span class="metric-val">Daily Cron</span>
+                  <span class="metric-lbl">Scheduler Automation</span>
                 </div>
                 <div class="arch-metric">
-                  <span class="metric-val">100%</span>
-                  <span class="metric-lbl">Automated SLAs</span>
+                  <span class="metric-val">Multi-Level</span>
+                  <span class="metric-lbl">Leave &amp; Expense Approvals</span>
                 </div>
                 <div class="arch-metric">
-                  <span class="metric-val">Multi-Tier</span>
-                  <span class="metric-lbl">Role Escalations</span>
+                  <span class="metric-val">Real-Time</span>
+                  <span class="metric-lbl">REST API Telemetry</span>
                 </div>
               </div>
             </div>
 
             <ul>
-              <li><b>Dynamic Rule-Based Assignment Engine:</b> Implemented flexible rule evaluation allowing managers to auto-allocate tasks according to team-specific criteria, geographic zones, agent skill levels, and workload balancing.</li>
-              <li><b>Real-Time Activity &amp; Status Tracking:</b> Engineered high-throughput REST APIs and telemetry endpoints capturing employee attendance, live check-ins, and task milestone transitions (Assigned → In Progress → Completed).</li>
-              <li><b>Multi-Tenant Hierarchy &amp; Role-Based Security:</b> Structured multi-tenant organizational layers (Organizations, Teams, Managers, Field Employees) with granular permission isolation.</li>
-              <li><b>SLA Deadlines &amp; Automated Escalations:</b> Integrated scheduled jobs monitoring delayed tasks, auto-reallocating overdue orders, and firing push notifications to supervisory managers.</li>
+              <li><b>Task Management &amp; Assignment:</b> Developed backend functionality for managers to create and assign tasks to field employees based on team-specific rules and business requirements.</li>
+              <li><b>User &amp; Team Management:</b> Worked on user management and organizational workflows supporting managers and field employees with role-based access and business validations.</li>
+              <li><b>Attendance &amp; Overtime:</b> Implemented scheduler-based attendance and overtime processing using daily cron jobs, reducing manual attendance corrections.</li>
+              <li><b>Leave &amp; Approval Workflow:</b> Developed leave request and multi-level approval workflows supporting different organizational roles.</li>
+              <li><b>Expense Management:</b> Developed expense submission and approval workflows covering Travel, Food, Accommodation, Mileage, and General expense categories.</li>
+              <li><b>Activity &amp; Operational Reporting:</b> Developed reports covering Attendance, Activity, Distance, Expense, Leave, Task, and Performance metrics to provide operational visibility.</li>
+              <li><b>Scheduler Automation:</b> Configured multiple Spring Boot cron jobs for background processing, attendance/overtime calculations, and scheduled reporting.</li>
+              <li><b>REST API Integration:</b> Developed and integrated REST APIs supporting real-time and scheduled data synchronization across different modules.</li>
+              <li><b>Production Support:</b> Investigated production issues, fixed backend defects, optimized database/API operations, and participated in code reviews.</li>
             </ul>
 
             <button type="button" class="project-toggle" onclick="toggleDetails(this)">
-              <span>Engine Details</span> <i class="fa-solid fa-chevron-down"></i>
+              <span>Module &amp; Workflow Breakdown</span> <i class="fa-solid fa-chevron-down"></i>
             </button>
 
             <div class="project-details">
               <p style="font-size: 13.5px; color: var(--text-2); margin-top: 8px;">
-                <b>High-Concurrency Architecture:</b> Backed by Redis distributed caching for rapid employee status lookups and MongoDB sharded collections for millions of daily tracking pings.
+                <b>Domain Architecture:</b> Built with Spring Boot backend services, Spring Data MongoDB for scalable high-velocity event storage, Redis for fast state caching, and robust RBAC security safeguarding enterprise client workflows across web and mobile endpoints.
               </p>
             </div>
 
             <div class="project-stack">
-              <span class="chip"><i class="fa-brands fa-java"></i> Java 11</span>
+              <span class="chip"><i class="fa-brands fa-java"></i> Java 11/17</span>
               <span class="chip">Spring Boot</span>
               <span class="chip">Spring Data MongoDB</span>
-              <span class="chip">Redis</span>
+              <span class="chip">Cron Schedulers</span>
               <span class="chip">REST APIs</span>
-              <span class="chip">Schedulers</span>
-              <span class="chip">Multi-Tenancy</span>
+              <span class="chip">Redis</span>
+              <span class="chip">Role-Based Access (RBAC)</span>
+              <span class="chip">Multi-Level Approvals</span>
+              <span class="chip">Operational Reporting</span>
             </div>
 
             <div class="project-links">
@@ -2638,10 +2645,10 @@
               Core Backend Engineering across TrackoField Enterprise Platform &amp; High-Throughput Synchronization Pipelines.
             </p>
             <ul>
-              <li><b>TrackoField Enterprise Engine:</b> Engineered core backend architecture for manager-led field workforce management, dynamic task allocation rules, live activity telemetry, and SLA deadline escalations.</li>
+              <li><b>TrackoField Field Force Management:</b> Engineered core backend modules for task management, team rules, scheduler-based attendance &amp; overtime processing, multi-level leave/expense approvals, and operational reporting.</li>
               <li><b>Midland DB Sync Pipeline:</b> Reduced sync runtime by 97% (from 2+ hours to 2.8 minutes) for 242K+ updates via streaming JDBC (<code>fetchSize=1000</code>), <code>bulkOps(UNORDERED)</code>, and compound indexing.</li>
-              <li><b>High-Throughput Caching:</b> Implemented Redis distributed caching layers for agent status lookups, slashing read latencies below 2ms.</li>
-              <li><b>Data Integrity:</b> Engineered rolling 24-hour lookback windows and automated reconciliation jobs eliminating dropped user profiles.</li>
+              <li><b>High-Throughput Caching &amp; APIs:</b> Implemented Redis distributed caching layers for agent status lookups (sub-2ms reads) and REST APIs for real-time telemetry synchronization.</li>
+              <li><b>Cron Automation &amp; Production Support:</b> Configured Spring Boot cron jobs for daily attendance/overtime calculations and investigated production defects with active code reviews.</li>
             </ul>
             <div class="job-stack">
               <span class="chip"><i class="fa-brands fa-java"></i> Java 8/11/17</span>
@@ -2650,6 +2657,8 @@
               <span class="chip">MS SQL Server</span>
               <span class="chip">Redis</span>
               <span class="chip">REST APIs</span>
+              <span class="chip">Cron Schedulers</span>
+              <span class="chip">Multi-Level Approvals</span>
               <span class="chip">JDBC Streaming</span>
               <span class="chip">BulkOps</span>
             </div>
