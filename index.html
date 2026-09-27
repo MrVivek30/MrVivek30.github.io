@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vivek Chowdhary — SDE-II &amp; Java Backend Developer</title>
-  <meta name="description" content="Portfolio of Vivek Chowdhary, SDE-II specializing in Java 8/11/17, Spring Boot, Microservices, Apache Kafka, Redis, and High-Throughput Data Synchronization." />
+  <title>Vivek Chowdhary — Software Engineer | SDE-II Backend &amp; Full-Stack Developer</title>
+  <meta name="description" content="Portfolio of Vivek Chowdhary — Software Engineer, SDE-II Backend &amp; Full-Stack Developer specializing in Java 8/11/17, Spring Boot, Microservices, Apache Kafka, Redis, High-Throughput Data Synchronization, and 900+ DSA algorithmic solutions." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -769,7 +769,7 @@
     /* Hero Stats Bar (Executive Metrics) */
     .hero-meta {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(5, 1fr);
       gap: 16px;
       margin-top: 52px;
     }
@@ -838,6 +838,10 @@
       font-weight: 500;
       line-height: 1.4;
       display: block;
+    }
+
+    @media (max-width: 1100px) {
+      .hero-meta { grid-template-columns: repeat(3, 1fr); }
     }
 
     @media (max-width: 960px) {
@@ -1019,16 +1023,57 @@
       font-weight: 500;
     }
 
+    .b-bootcamp {
+      grid-column: span 6;
+      background: linear-gradient(160deg, rgba(245, 158, 11, 0.07), transparent), var(--surface);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .b-bootcamp .school {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 20px;
+      line-height: 1.35;
+    }
+
+    .b-bootcamp .sub {
+      color: var(--text-2);
+      margin-top: 8px;
+      font-size: 13.5px;
+      line-height: 1.55;
+    }
+
+    .b-bootcamp .badge {
+      font-family: var(--font-mono);
+      border: 1px solid #f59e0b;
+      color: #f59e0b;
+      border-radius: 999px;
+      padding: 4px 10px;
+      font-size: 11px;
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
     .b-edu {
-      grid-column: span 4;
+      grid-column: span 6;
       background: linear-gradient(160deg, var(--surface-2), transparent), var(--surface);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
 
     .b-edu .school {
       font-family: var(--font-display);
       font-size: 18px;
       font-weight: 700;
-      margin-top: 22px;
+      margin-top: 20px;
       line-height: 1.35;
     }
 
@@ -1036,7 +1081,7 @@
       color: var(--text-2);
       margin-top: 8px;
       font-size: 13.5px;
-      line-height: 1.5;
+      line-height: 1.55;
     }
 
     .b-edu .badge {
@@ -1052,7 +1097,7 @@
     }
 
     .b-clock {
-      grid-column: span 4;
+      grid-column: span 5;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1087,7 +1132,7 @@
     }
 
     .b-links {
-      grid-column: span 4;
+      grid-column: span 7;
       display: flex;
       flex-direction: column;
       gap: 10px;
@@ -1126,8 +1171,7 @@
     }
 
     @media (max-width: 960px) {
-      .b-story, .b-now { grid-column: span 12; }
-      .b-edu, .b-clock, .b-links { grid-column: span 6; }
+      .b-story, .b-now, .b-bootcamp, .b-edu, .b-clock, .b-links { grid-column: span 12; }
       .b-pillars { grid-template-columns: 1fr; }
     }
 
@@ -1698,6 +1742,14 @@
     }
 
     .skill-focus:nth-child(4)::before {
+      background: linear-gradient(90deg, #ec4899, #f43f5e);
+    }
+
+    .skill-focus:nth-child(5)::before {
+      background: linear-gradient(90deg, #06b6d4, #3b82f6);
+    }
+
+    .skill-focus:nth-child(6)::before {
       background: linear-gradient(90deg, var(--accent-amber), var(--accent-2));
     }
 
@@ -1966,15 +2018,17 @@
           <div class="hero-role reveal is-visible">
             <span>I’m a</span>
             <span class="rotator" id="roleRotator" aria-live="polite">
-              <span class="on">SDE-II Backend Engineer</span>
+              <span class="on">Software Engineer</span>
+              <span>SDE-II Backend Developer</span>
+              <span>Full-Stack Developer</span>
+              <span>900+ DSA Problem Solver</span>
               <span>Distributed Systems Architect</span>
               <span>High-Throughput Data Sync Specialist</span>
-              <span>Java 17 &amp; Kafka Engineer</span>
             </span>
           </div>
 
           <p class="hero-tagline reveal is-visible">
-            I engineer high-throughput backend services and data synchronization pipelines at InsightGeeks Solutions — building scalable microservices, dynamic task-rule assignment engines, and real-time event-driven systems.
+            I am a <b>Software Engineer, SDE-II Backend Developer, and Full-Stack Engineer</b> at InsightGeeks Solutions — engineering high-throughput backend services, dynamic task-rule assignment engines, and real-time event-driven systems, backed by <b>900+ algorithmic DSA solutions</b> from my military-style Masai bootcamp journey.
           </p>
 
           <div class="hero-actions reveal is-visible">
@@ -2008,15 +2062,15 @@
             </div>
 
             <div class="hero-photo-card">
-              <img src="./assets/vivek-chowdhary.jpg" alt="Vivek Chowdhary — SDE-II &amp; Java Backend Developer" class="hero-photo-img" />
+              <img src="./assets/vivek-chowdhary.jpg" alt="Vivek Chowdhary — Software Engineer, SDE-II Backend &amp; Full-Stack Developer" class="hero-photo-img" />
             </div>
 
             <div class="hero-floating-badge badge-pos-2">
-              <i class="fa-solid fa-server" style="color: var(--accent);"></i> SDE-II @ InsightGeeks
+              <i class="fa-solid fa-code" style="color: var(--accent);"></i> 900+ DSA Solved (Masai)
             </div>
 
             <div class="hero-floating-badge badge-pos-3">
-              <i class="fa-solid fa-database" style="color: var(--accent-3);"></i> 500K+ Batch Records
+              <i class="fa-solid fa-laptop-code" style="color: var(--accent-3);"></i> Software &amp; Full-Stack Eng.
             </div>
           </div>
         </div>
@@ -2044,11 +2098,20 @@
 
         <div class="stat">
           <div class="stat-head">
+            <span class="stat-icon"><i class="fa-solid fa-code"></i></span>
+            <span class="chip" style="font-size: 10.5px; padding: 2px 8px; border-color: rgba(236, 72, 153, 0.4); color: #ec4899;">Algorithms</span>
+          </div>
+          <strong data-target="900" data-suffix="+">900+</strong>
+          <span>DSA Problems Solved (Masai)</span>
+        </div>
+
+        <div class="stat">
+          <div class="stat-head">
             <span class="stat-icon"><i class="fa-solid fa-briefcase"></i></span>
             <span class="chip" style="font-size: 10.5px; padding: 2px 8px; border-color: rgba(56, 189, 248, 0.4); color: var(--accent);">Experience</span>
           </div>
           <strong data-target="3" data-suffix="+ Yrs">3+ Yrs</strong>
-          <span>Production Java &amp; Distributed Systems</span>
+          <span>Software, Backend &amp; Full-Stack</span>
         </div>
 
         <div class="stat">
@@ -2069,6 +2132,9 @@
         <span>Spring Boot 3</span>
         <span>Microservices</span>
         <span>Apache Kafka</span>
+        <span>900+ DSA Solved</span>
+        <span>Full-Stack Development</span>
+        <span>Military-Style Bootcamp</span>
         <span>Redis Caching</span>
         <span>MongoDB</span>
         <span>MS SQL Server</span>
@@ -2088,6 +2154,9 @@
         <span>Spring Boot 3</span>
         <span>Microservices</span>
         <span>Apache Kafka</span>
+        <span>900+ DSA Solved</span>
+        <span>Full-Stack Development</span>
+        <span>Military-Style Bootcamp</span>
         <span>Redis Caching</span>
         <span>MongoDB</span>
         <span>MS SQL Server</span>
@@ -2117,17 +2186,20 @@
         <!-- Story Card -->
         <article class="card b-story reveal">
           <div class="label">
-            <i class="fa-solid fa-network-wired" style="color: var(--accent);"></i>
-            Enterprise Backend × Field Operations × High-Throughput Sync
+            <i class="fa-solid fa-code" style="color: var(--accent);"></i>
+            Software Engineer × SDE-II Backend × Full-Stack Developer
           </div>
           <p>
-            I am an <b>SDE-II / Java Backend Developer</b> at <b>InsightGeeks Solutions</b> with 3+ years of experience engineering high-throughput backend services, distributed event streams, and mission-critical enterprise systems.
+            I am a <b>Software Engineer, SDE-II Backend Developer, and Full-Stack Developer</b> at <b>InsightGeeks Solutions</b> with 3+ years of experience engineering high-throughput backend services, distributed event streams, and mission-critical enterprise systems.
           </p>
           <p>
             At InsightGeeks, my core work centers on the <b>TrackoField Enterprise platform</b> — a scalable field workforce management system enabling managers to oversee field employees, assign tasks dynamically according to predefined team rules and requirements, and track real-time agent activities, progress, and SLAs.
           </p>
           <p>
             Recently, I architected the <b>Midland DB Syncing Integration</b>: an end-to-end data pipeline between an enterprise client's (Midland Microfin) MS SQL Server and TrackoField's MongoDB, slashing sync runtime by <b>97% from 2+ hours down to 2.8 minutes</b> for 242,000+ records via streaming JDBC (<code>fetchSize=1000</code>), <code>bulkOps(UNORDERED)</code>, compound indexing (<code>{ cmpId: 1, mbrCde: 1 }</code>), and a rolling 24-hour lookback window eliminating edge-case data omissions.
+          </p>
+          <p>
+            My engineering discipline was forged through an intensive, military-style 1200+ hour coding bootcamp at <b>Masai School (9-9-6 regimen: 9am-9pm, 6 days/week)</b>, where I solved <b>900+ Data Structures &amp; Algorithms (DSA) problems</b> and developed end-to-end full-stack applications with clean architectural principles.
           </p>
 
           <div class="b-pillars">
@@ -2140,8 +2212,8 @@
               Cursor streaming &amp; compound indexing replacing full collection scans.
             </div>
             <div class="b-pillar">
-              <strong>03. Clean Architecture</strong>
-              Domain-driven design, choreography sagas, and multi-tenant hierarchies.
+              <strong>03. Algorithmic Rigor</strong>
+              900+ DSA solutions, clean OOP, and microservices domain architecture.
             </div>
           </div>
         </article>
@@ -2157,13 +2229,31 @@
           </div>
           <div class="timeline-mini">
             <div>
-              <b>Masai School — Full Stack Web Dev</b>
-              <span>Jan 2023 — Jun 2023</span>
+              <b>Masai School — Military-Style Full Stack Bootcamp</b>
+              <span>900+ DSA Solved · 1200+ Coding Hours</span>
             </div>
             <div>
               <b>AKTU, Lucknow — B.Tech ECE</b>
-              <span>2018 — 2022</span>
+              <span>2018 — 2022 · CGPA: 7.97</span>
             </div>
+          </div>
+        </article>
+
+        <!-- Masai School Military Coding Bootcamp Card -->
+        <article class="card b-bootcamp reveal">
+          <span class="badge"><i class="fa-solid fa-fire"></i> 900+ DSA Solved</span>
+          <i class="fa-solid fa-shield-halved" style="font-size: 32px; color: #f59e0b;"></i>
+          <div>
+            <div class="school">Masai School — Military-Style Coding Bootcamp</div>
+            <div class="sub">
+              Completed an intensive <b>1200+ hours military-style coding curriculum (9-9-6 regimen: 9am-9pm, 6 days/week)</b>. Mastered full-stack software development, clean architecture, and solved <b>900+ DSA algorithmic problems</b> across Dynamic Programming, Graphs, Trees, Heaps, and Recursion.
+            </div>
+          </div>
+          <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="chip" style="font-size: 11px; padding: 2px 8px; border-color: rgba(245, 158, 11, 0.4); color: #f59e0b;"><i class="fa-solid fa-code"></i> 900+ DSA Solved</span>
+            <span class="chip" style="font-size: 11px; padding: 2px 8px;">Military 9-9-6 Regimen</span>
+            <span class="chip" style="font-size: 11px; padding: 2px 8px;">Full-Stack Web Dev</span>
+            <span class="chip" style="font-size: 11px; padding: 2px 8px;">1200+ Coding Hours</span>
           </div>
         </article>
 
@@ -2171,8 +2261,15 @@
         <article class="card b-edu reveal">
           <span class="badge">B.Tech Graduate</span>
           <i class="fa-solid fa-graduation-cap" style="font-size: 32px; color: var(--accent);"></i>
-          <div class="school">Dr. A. P. J. Abdul Kalam Technical University, Lucknow</div>
-          <div class="sub">B.Tech in Electronics &amp; Communication Engg. (2018 — 2022) · CGPA: 7.97 · Computer Networks, Digital Systems &amp; Microprocessors</div>
+          <div>
+            <div class="school">Dr. A. P. J. Abdul Kalam Technical University, Lucknow</div>
+            <div class="sub">B.Tech in Electronics &amp; Communication Engg. (2018 — 2022) · CGPA: 7.97 · Strong engineering foundation in Digital Systems, Computer Networks &amp; Microprocessors.</div>
+          </div>
+          <div style="margin-top: 14px; display: flex; flex-wrap: wrap; gap: 6px;">
+            <span class="chip" style="font-size: 11px; padding: 2px 8px;">AKTU, Lucknow</span>
+            <span class="chip" style="font-size: 11px; padding: 2px 8px;">Computer Networks</span>
+            <span class="chip" style="font-size: 11px; padding: 2px 8px;">Digital Electronics</span>
+          </div>
         </article>
 
         <!-- Local Time Card -->
@@ -2564,24 +2661,30 @@
           <div class="job-dot">02</div>
           <article class="card job-card">
             <div class="job-top">
-              <h3>Full Stack Web Development Fellow</h3>
-              <span class="company">@ Masai School</span>
+              <h3>Software Engineer Fellow — Full-Stack &amp; Algorithmic Mastery</h3>
+              <span class="company">@ Masai School (Military-Style Coding Bootcamp)</span>
               <span class="period">Jan 2023 — Jun 2023 · Bengaluru (Remote)</span>
             </div>
             <p class="job-summary">
-              Intensive military-style 1200+ hours coding bootcamp focused on Data Structures &amp; Algorithms, Software Engineering Principles, and Java Backend Mastery.
+              Completed an intensive, military-style 1200+ hours coding bootcamp (9-9-6 curriculum: 9 AM to 9 PM, 6 days a week) dedicated to rigorous Data Structures &amp; Algorithms, Software Engineering, and Full-Stack Web Development.
             </p>
             <ul>
-              <li>Built full-stack web applications and microservice prototypes with Spring Boot, Hibernate, MySQL, and REST APIs.</li>
-              <li>Solved 300+ DSA algorithmic challenges covering Graphs, Dynamic Programming, Trees, and Linked Lists.</li>
-              <li>Participated in collaborative team agile sprints simulating real-world production release cycles.</li>
+              <li><b>900+ DSA Problems Solved:</b> Solved 900+ complex algorithmic challenges across Dynamic Programming, Graph Theory (BFS/DFS/Dijkstra), Binary Trees &amp; BST, Recursion/Backtracking, Heaps, Sliding Window, and Two Pointers on HackerRank and LeetCode.</li>
+              <li><b>Military-Style Coding Bootcamp (9-9-6):</b> Developed relentless coding stamina, debugging endurance, and production-speed delivery under high-pressure daily deadlines simulating high-growth startup conditions.</li>
+              <li><b>Full-Stack Web Development:</b> Architected and shipped robust full-stack web applications connecting Spring Boot Java backend microservices with responsive JavaScript/React frontends and MySQL databases.</li>
+              <li><b>Agile Sprint Simulations:</b> Led and participated in agile scrums with daily standups, code reviews, git merge conflict resolutions, and CI/CD deployment demos.</li>
             </ul>
             <div class="job-stack">
+              <span class="chip" style="border-color: rgba(236, 72, 153, 0.4); color: #ec4899;"><i class="fa-solid fa-code"></i> 900+ DSA Solved</span>
+              <span class="chip" style="border-color: rgba(245, 158, 11, 0.4); color: #f59e0b;"><i class="fa-solid fa-shield-halved"></i> Military 9-9-6 Bootcamp</span>
               <span class="chip"><i class="fa-brands fa-java"></i> Java 8/11</span>
+              <span class="chip">Full-Stack Development</span>
               <span class="chip">Spring Boot</span>
-              <span class="chip">Hibernate</span>
+              <span class="chip">Data Structures</span>
+              <span class="chip">Algorithms</span>
               <span class="chip">MySQL</span>
-              <span class="chip">DSA</span>
+              <span class="chip">JavaScript / React</span>
+              <span class="chip">REST APIs</span>
             </div>
           </article>
         </div>
@@ -2694,14 +2797,66 @@
           </div>
         </article>
 
-        <!-- Focus 4: DevOps & Tooling -->
+        <!-- Focus 4: Algorithms & DSA (900+ Problems) -->
+        <article class="card skill-focus reveal">
+          <div class="skill-focus-top">
+            <span class="skill-focus-icon" style="color: #ec4899; background: rgba(236, 72, 153, 0.12); border-color: rgba(236, 72, 153, 0.25);">
+              <i class="fa-solid fa-code"></i>
+            </span>
+            <div>
+              <span class="skill-focus-index">04</span>
+              <h3>Algorithms &amp; DSA (900+ Solved)</h3>
+            </div>
+          </div>
+          <p>
+            Rigorous algorithmic problem-solving mastered through Masai School's military-style bootcamp. Deep expertise in time/space complexity optimization, graphs, trees, and dynamic programming.
+          </p>
+          <div class="chips">
+            <span class="chip" style="border-color: rgba(236, 72, 153, 0.4); color: #ec4899;"><i class="fa-solid fa-bolt"></i> 900+ DSA Solved</span>
+            <span class="chip">Dynamic Programming</span>
+            <span class="chip">Graphs &amp; BFS/DFS</span>
+            <span class="chip">Binary Trees &amp; BST</span>
+            <span class="chip">Recursion &amp; Backtracking</span>
+            <span class="chip">Sliding Window</span>
+            <span class="chip">Two Pointers</span>
+            <span class="chip">Time/Space Big-O</span>
+          </div>
+        </article>
+
+        <!-- Focus 5: Full-Stack Web Development -->
+        <article class="card skill-focus reveal">
+          <div class="skill-focus-top">
+            <span class="skill-focus-icon" style="color: #06b6d4; background: rgba(6, 182, 212, 0.12); border-color: rgba(6, 182, 212, 0.25);">
+              <i class="fa-solid fa-laptop-code"></i>
+            </span>
+            <div>
+              <span class="skill-focus-index">05</span>
+              <h3>Full-Stack Web Development</h3>
+            </div>
+          </div>
+          <p>
+            End-to-end full-stack engineering proficiency seamlessly bridging scalable Java/Spring backend microservices with responsive, dynamic frontend web interfaces.
+          </p>
+          <div class="chips">
+            <span class="chip" style="border-color: rgba(6, 182, 212, 0.4); color: #06b6d4;"><i class="fa-solid fa-layer-group"></i> Full-Stack Architecture</span>
+            <span class="chip">JavaScript (ES6+)</span>
+            <span class="chip">React.js</span>
+            <span class="chip">HTML5 &amp; CSS3</span>
+            <span class="chip">RESTful API Design</span>
+            <span class="chip">Axios / Fetch</span>
+            <span class="chip">State Management</span>
+            <span class="chip">Responsive UI</span>
+          </div>
+        </article>
+
+        <!-- Focus 6: DevOps & Tooling -->
         <article class="card skill-focus reveal">
           <div class="skill-focus-top">
             <span class="skill-focus-icon">
               <i class="fa-solid fa-toolbox"></i>
             </span>
             <div>
-              <span class="skill-focus-index">04</span>
+              <span class="skill-focus-index">06</span>
               <h3>DevOps &amp; Engineering Rigor</h3>
             </div>
           </div>
@@ -2727,7 +2882,7 @@
         <span class="eyebrow">Get In Touch</span>
         <h2>Let’s build resilient systems together.</h2>
         <p>
-          Currently open to <b>SDE-II / Java Backend Developer</b> roles in India (Bengaluru, Hyderabad, Pune, Noida, Gurgaon, or Remote).
+          Currently open to <b>Software Engineer, SDE-II Backend, or Full-Stack Developer</b> roles in India (Bengaluru, Hyderabad, Pune, Noida, Gurgaon, or Remote).
         </p>
 
         <div class="contact-actions">
